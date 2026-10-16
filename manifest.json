@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "crome.vitals",
+  "name": "Vitals",
+  "version": "1.3.0",
+  "author": "crome",
+  "license": "MIT",
+  "description": "Live CPU, memory, disk, temperature, GPU, and network icons that fill with usage. Click for thresholds, colors, and which GPUs to show.",
+  "kinds": ["bar-widget"],
+  "entryPoints": {
+    "barWidget": "Vitals.qml"
+  },
+  "barWidget": {
+    "displayName": "Vitals",
+    "description": "CPU, memory, disk, temperature, GPU, and network usage as fill icons, with color thresholds, a memory size option, bar placement, and a per-GPU on/off list",
+    "category": "System",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "showPercent": true,
+      "memoryAsAmount": false,
+      "accentFill": true,
+      "thresholdsEnabled": true,
+      "usageWarn": 70,
+      "usageCrit": 90,
+      "tempWarn": 70,
+      "tempCrit": 85,
+      "colorNormal": "",
+      "colorWarn": "#e6b84a",
+      "colorCrit": "",
+      "colorValue": "",
+      "trackCpu": true,
+      "trackMem": true,
+      "trackDisk": true,
+      "trackTemp": true,
+      "trackGpu": true,
+      "trackGpuTemp": true,
+      "trackNet": false,
+      "order": ["cpu", "mem", "disk", "temp", "gpu", "gputemp", "net"],
+      "disabledGpus": []
+    }
+  }
+}
